@@ -1,12 +1,15 @@
 package com.programacion.taller3;
 
+import com.programacion.taller3.utils.MyStreamingChatResponseHandler;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 
-public class ChatMain {
-    public static ChatModel chatModel(){
-        return // debe ser generico no usar OpenAiChatModel
-                 OpenAiChatModel.builder()
+import static com.programacion.taller3.ChatMain.chatModel;
+
+public class ChatStreamingMain {
+    static void main() {
+        var ChatModel = OpenAiStreamingChatModel.builder()
                 .apiKey("api-key-real")
                 .modelName("llama-2-7b-chat.Q4_0.gguf")
                 .baseUrl("http://localhost:8080") //tratar de conectarse con open ai si no se especifica
@@ -14,15 +17,10 @@ public class ChatMain {
                 .logResponses(true)
                 .build();
 
-    }
-    static void main() {
-        // debe ser generico no usar OpenAiChatModel
-        ChatModel model = chatModel();
+        ChatModel.chat("¿Que es llama.cpp?", new MyStreamingChatResponseHandler());
 
-        var respuesta = model.chat("Qué es llama.cpp?");
+        while (true){
 
-        System.out.println("[respuesta]");
-        System.out.println(respuesta);
-
+        }
     }
 }
