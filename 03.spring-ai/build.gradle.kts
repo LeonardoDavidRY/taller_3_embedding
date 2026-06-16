@@ -38,4 +38,3 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 tasks.register("prepareKotlinBuildScriptModel") {}
-

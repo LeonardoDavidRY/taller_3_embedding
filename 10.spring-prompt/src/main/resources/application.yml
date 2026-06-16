@@ -4,7 +4,7 @@ server:
 spring:
     ai:
         openai:
-            api-key: ${SPRING_AI_OPENAI_API_KEY}
+            api-key: ${API_KEY}
             base-url: https://api.groq.com/openai/v1
             chat:
                 options:

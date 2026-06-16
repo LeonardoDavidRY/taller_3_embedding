@@ -1,14 +1,11 @@
 server:
   port: 8090
 
-app:
-  key: xyz
-  aimodel: llama3.2
-
 spring:
   ai:
     openai:
-      api-key: ${app.key}
-      base-url: http://localhost:8080
+      api-key: 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
+      base-url: https://api.groq.com/openai/v1
       chat:
-        model: ${app.aimodel}
+        options:
+          model: llama-3.3-70b-versatile
