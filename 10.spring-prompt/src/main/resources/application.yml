@@ -10,7 +10,6 @@ spring:
                 options:
                     model: llama-3.3-70b-versatile
 
-
 logging:
     level:
         org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG

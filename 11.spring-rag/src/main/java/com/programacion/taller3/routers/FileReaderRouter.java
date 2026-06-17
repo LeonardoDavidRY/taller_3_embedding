@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class FileReaderRouter extends RouteBuilder {
 
     // Se mantiene el formato exacto de tu docente, pero apuntando a tu carpeta en Windows
-    @Value("${app.files.inbound:C:/tools/springai}")
+    @Value("${app.files.inbound:C:/taller 3/springai}")
     String inboundPath;
 
     @Override
