@@ -15,17 +15,14 @@ spring:
                     model-uri: classpath:models/model.onnx
                 tokenizer:
                     uri: classpath:models/tokenizer.json
-            vectorstore:
-                qdrant:
-                    collection-name: springai
         openai:
-            api-key: ${API-KEY}
+            api-key: ${API_KEY}
             base-url: https://api.groq.com/openai/v1
             chat:
                 options:
                     model: llama-3.3-70b-versatile
                 embedding:
-                    model: nomic-embed-text-v1.5
+                    enabled: false
 
 #link de descarga de model.onnx y tokenizer.json
 #https://github.com/spring-projects/spring-ai/tree/main/models/spring-ai-transformers/src/main/resources/onnx/all-MiniLM-L6-v2
