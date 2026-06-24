@@ -7,3 +7,6 @@ services:
             - '6334:6334'
         volumes:
             - C:/qdrant_storage:/qdrant/storage
+
+volumes:
+    qdrant_storage:
